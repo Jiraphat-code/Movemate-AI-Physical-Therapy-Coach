@@ -45,9 +45,9 @@ def app():
 
     # Define model options and their paths (replace with your actual paths)
     model_options = {
-        "โมเดล 33 จุด (Raw MediaPipe Landmarks)": "models\movemate_raw_data_rf.pkl", # ตัวอย่าง
-        "โมเดล 17 จุด (Selected MediaPipe Landmarks)": "models\movemate_17keys_rf.pkl", # ตัวอย่าง
-        "โมเดล 17 จุด + Features (ระยะห่าง/มุม)": "models\movemate_feature_rf.pkl" # ตัวอย่าง
+        "โมเดล 33 จุด (Raw MediaPipe Landmarks)": "models/movemate_raw_data_no_tremor_rf.pkl", 
+        "โมเดล 17 จุด (Selected MediaPipe Landmarks)": "models/movemate_17keys_rf.pkl", 
+        "โมเดล 17 จุด + Features (ระยะห่าง/มุม)": "models/movemate_feature_rf.pkl" 
     }
 
     selected_model_display = st.selectbox(
