@@ -40,7 +40,7 @@ def app():
 
     st.write(f"**แหล่งที่มา:** {video_source} {video_name}")
     st.write(f"**แขนที่เลือก:** {selected_arm}")
-    st.write(f"**โมเดลที่ใช้:** {selected_model_type}")
+    st.write(f"**โมเดลที่ใช้:** {selected_model_type} {model_file_path}")
 
     # Load the selected model
     model = load_model(model_file_path)
