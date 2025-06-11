@@ -166,7 +166,7 @@ This project is licensed under the [Your License Type, e.g., MIT License] - see 
 
 If you have any questions or feedback, please feel free to reach out:
 
-**[Your Name / Team Name]** - [Your Email Address]
+**[Jiraphat Ultra]** - jirapatulta2550@gmail.com
 
 Project Link: [https://github.com/Jiraphat-code/Movemate-AI-Physical-Therapy-Coach](https://github.com/Jiraphat-code/Movemate-AI-Physical-Therapy-Coach)
 
