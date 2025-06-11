@@ -101,38 +101,6 @@ Once all installations are complete, you can launch the Streamlit application:
     * **Processing Selection Page:** Choose your video source, exercise side, and the AI model.
     * **Processing & Results Page:** Click "Start Processing" to begin the real-time analysis or video playback. A detailed report will be generated upon completion.
 
-## 📂 Project Structure
-
-├── app.py                      # Main Streamlit application entry point (handles page navigation)
-├── pages/
-│   ├── 1_Home.py               # Home page: project introduction, user information input
-│   ├── 2_FeatureSelect.py      # Feature Selection page: video input, exercise side, model choice, example videos
-│   └── 3_Processing.py         # Processing & Results page: real-time analysis, rep counting, report generation
-│
-├── utils/
-│   ├── init.py             # Initializes 'utils' as a Python package
-│   ├── mediapipe_utils.py      # Functions related to MediaPipe (detection, drawing, angle/feature calculation)
-│   ├── video_utils.py          # Utilities for video handling (webcam/file input, frame saving, cleanup)
-│   ├── report_utils.py         # Functions for creating and displaying rehabilitation reports
-│   └── model_loader.py         # Handles loading of ML models and LabelEncoder
-│
-├── models/
-│   ├── movemate_no_encoding_rf.pkl # Your trained Machine Learning model
-│   └── label_encoder.pkl       # LabelEncoder used for class name mapping (e.g., numerical label to 'elbow_bent')
-│
-├── training_scripts/           # (Optional) Folder containing scripts for model training and data preprocessing
-│   ├── train_model.py          # Example: Script for training the ML model
-│   └── preprocess_data.py      # Example: Script for data cleaning, augmentation, feature engineering
-│
-├── keypoint_data/              # (Optional) Folder for raw/processed keypoint data files (e.g., CSV, JSON)
-│   ├── train_keypoints.csv
-│   └── test_keypoints.csv
-│
-├── rep_classifier.py           # Logic for classifying repetitions (e.g., correct/incorrect form)
-├── requirements.txt            # Lists all Python dependencies for the Streamlit application
-└── README.md                   # This README file
-
-
 ## 🧠 Model Training & Data Aspects
 
 The core of MoveMate relies on a Machine Learning model trained to classify various physical therapy poses.
@@ -166,7 +134,7 @@ This project is licensed under the [Your License Type, e.g., MIT License] - see 
 
 If you have any questions or feedback, please feel free to reach out:
 
-**[Jiraphat Ultra]** - jirapatulta2550@gmail.com
+**Jiraphat Punthsang Ultra** - jirapatulta2550@gmail.com
 
 Project Link: [https://github.com/Jiraphat-code/Movemate-AI-Physical-Therapy-Coach](https://github.com/Jiraphat-code/Movemate-AI-Physical-Therapy-Coach)
 
