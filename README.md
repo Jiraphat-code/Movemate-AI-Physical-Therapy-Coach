@@ -102,3 +102,73 @@ Once all installations are complete, you can launch the Streamlit application:
     * **Processing & Results Page:** Click "Start Processing" to begin the real-time analysis or video playback. A detailed report will be generated upon completion.
 
 ## 📂 Project Structure
+
+├── app.py                      # Main Streamlit application entry point (handles page navigation)
+├── pages/
+│   ├── 1_Home.py               # Home page: project introduction, user information input
+│   ├── 2_FeatureSelect.py      # Feature Selection page: video input, exercise side, model choice, example videos
+│   └── 3_Processing.py         # Processing & Results page: real-time analysis, rep counting, report generation
+│
+├── utils/
+│   ├── init.py             # Initializes 'utils' as a Python package
+│   ├── mediapipe_utils.py      # Functions related to MediaPipe (detection, drawing, angle/feature calculation)
+│   ├── video_utils.py          # Utilities for video handling (webcam/file input, frame saving, cleanup)
+│   ├── report_utils.py         # Functions for creating and displaying rehabilitation reports
+│   └── model_loader.py         # Handles loading of ML models and LabelEncoder
+│
+├── models/
+│   ├── movemate_no_encoding_rf.pkl # Your trained Machine Learning model
+│   └── label_encoder.pkl       # LabelEncoder used for class name mapping (e.g., numerical label to 'elbow_bent')
+│
+├── training_scripts/           # (Optional) Folder containing scripts for model training and data preprocessing
+│   ├── train_model.py          # Example: Script for training the ML model
+│   └── preprocess_data.py      # Example: Script for data cleaning, augmentation, feature engineering
+│
+├── keypoint_data/              # (Optional) Folder for raw/processed keypoint data files (e.g., CSV, JSON)
+│   ├── train_keypoints.csv
+│   └── test_keypoints.csv
+│
+├── rep_classifier.py           # Logic for classifying repetitions (e.g., correct/incorrect form)
+├── requirements.txt            # Lists all Python dependencies for the Streamlit application
+└── README.md                   # This README file
+
+
+## 🧠 Model Training & Data Aspects
+
+The core of MoveMate relies on a Machine Learning model trained to classify various physical therapy poses.
+
+* **Data Collection:** Keypoint data is extracted from rehabilitation exercise videos using MediaPipe.
+* **Data Preprocessing & Feature Engineering:** The raw keypoint data undergoes several preprocessing steps, including:
+    * Filtering out noisy landmarks (e.g., based on visibility scores).
+    * **Symmetry Augmentation:** Augmenting the training data by mirroring poses to enhance the model's generalization across different body sides.
+    * **Feature Selection:** Focusing on essential X, Y coordinates of key anatomical landmarks and engineering biomechanically relevant features such as joint angles (e.g., elbow, shoulder, knee angles) and distances.
+    * **Handling Class Imbalance:** Techniques like SMOTE (Synthetic Minority Over-sampling Technique) are applied to the training data to ensure the model learns effectively from all exercise classes, especially those with fewer samples. **Note: Class imbalance is addressed only on the training set; validation and test sets reflect natural distribution to ensure robust evaluation.**
+* **Model Training:** Various classification models (e.g., RandomForestClassifier, LogisticRegression) are trained on the prepared data.
+* **Validation & Error Analysis:** Model performance is rigorously validated against separate datasets (including data from different users) to assess generalization capabilities and analyze specific error patterns.
+
+Detailed scripts for data preparation and model training can be found in the `training_scripts/` directory.
+
+## 🤝 Contributing
+
+We welcome contributions to the MoveMate project! If you have ideas for improvements or new features, please feel free to:
+
+1.  Fork this repository.
+2.  Create your feature branch (`git checkout -b feature/AmazingFeature`).
+3.  Commit your changes (`git commit -m 'Add some AmazingFeature'`).
+4.  Push to the branch (`git push origin feature/AmazingFeature`).
+5.  Open a Pull Request.
+
+## 📄 License
+
+This project is licensed under the [Your License Type, e.g., MIT License] - see the `LICENSE` file for details.
+
+## ✉️ Contact
+
+If you have any questions or feedback, please feel free to reach out:
+
+**[Your Name / Team Name]** - [Your Email Address]
+
+Project Link: [https://github.com/Jiraphat-code/Movemate-AI-Physical-Therapy-Coach](https://github.com/Jiraphat-code/Movemate-AI-Physical-Therapy-Coach)
+
+---
+Made with ❤️ by Jiraphat Punthsang.
