@@ -1,4 +1,4 @@
-# MoveMate — Your Personal Rehab AI ✨
+# MoveMate — Your AI Rehab Companion at Home ✨
 
 ## 🚀 Welcome to MoveMate!
 
