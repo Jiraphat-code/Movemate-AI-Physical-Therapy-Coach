@@ -4,13 +4,6 @@
 
 MoveMate is an AI-powered physical therapy assistant designed to help you perform rehabilitation exercises effectively and safely from the comfort of your home. By leveraging real-time pose estimation and machine learning, MoveMate provides instant feedback, counts repetitions, and tracks your progress to ensure proper form and optimal recovery.
 
-### 💡 Why MoveMate?
-
-* **Instant Feedback:** Get immediate posture and movement analysis as you exercise, ensuring you maintain correct form.
-* **Convenience & Accessibility:** Perform your rehabilitation exercises anywhere, anytime, without needing to travel to a clinic.
-* **Progress Tracking:** Receive comprehensive reports on your training sessions to monitor your improvement over time.
-* **Personalized Experience:** Input your personal details and rehabilitation goals to receive tailored feedback and reports.
-
 ## ✨ Key Features
 
 1.  **Home Page (`1_Home.py`)**
@@ -125,10 +118,6 @@ We welcome contributions to the MoveMate project! If you have ideas for improvem
 3.  Commit your changes (`git commit -m 'Add some AmazingFeature'`).
 4.  Push to the branch (`git push origin feature/AmazingFeature`).
 5.  Open a Pull Request.
-
-## 📄 License
-
-This project is licensed under the [Your License Type, e.g., MIT License] - see the `LICENSE` file for details.
 
 ## ✉️ Contact
 
