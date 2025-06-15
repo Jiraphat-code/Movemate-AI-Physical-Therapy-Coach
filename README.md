@@ -103,7 +103,6 @@ The core of MoveMate relies on a Machine Learning model trained to classify vari
     * Filtering out noisy landmarks (e.g., based on visibility scores).
     * **Symmetry Augmentation:** Augmenting the training data by mirroring poses to enhance the model's generalization across different body sides.
     * **Feature Selection:** Focusing on essential X, Y coordinates of key anatomical landmarks and engineering biomechanically relevant features such as joint angles (e.g., elbow, shoulder, knee angles) and distances.
-    * **Handling Class Imbalance:** Techniques like SMOTE (Synthetic Minority Over-sampling Technique) are applied to the training data to ensure the model learns effectively from all exercise classes, especially those with fewer samples. **Note: Class imbalance is addressed only on the training set; validation and test sets reflect natural distribution to ensure robust evaluation.**
 * **Model Training:** Various classification models (e.g., RandomForestClassifier, LogisticRegression) are trained on the prepared data.
 * **Validation & Error Analysis:** Model performance is rigorously validated against separate datasets (including data from different users) to assess generalization capabilities and analyze specific error patterns.
 
